@@ -12,30 +12,37 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Hash;
 
 class UserResource extends Resource
 {
     protected static ?string $model = User::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Pengaturan';
+    protected static ?string $navigationIcon = 'heroicon-o-user-circle';
+    protected static ?string $navigationLabel = 'Pengguna';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\Section::make('Akun')
+                Forms\Components\Section::make()
                     ->schema([
                         Forms\Components\TextInput::make('name')
-                            ->label('Nama')
                             ->required(),
                         Forms\Components\TextInput::make('email')
                             ->email()
                             ->required(),
                         Forms\Components\TextInput::make('password')
-                            ->label('Kata sandi')
                             ->password()
+                            ->dehydrateStateUsing(fn ($state) => Hash::make($state))
+                            ->required(),
+                        Forms\Components\Select::make('roles')
+                            ->label('Roles')
+                            ->multiple()
+                            ->relationship('roles', 'name')->preload()
                             ->required()
-                    ])->collapsible()
+                    ])->columns(2)
             ]);
     }
 
@@ -43,7 +50,11 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('email'),
+                Tables\Columns\TextColumn::make('roles.name')
+                    ->badge()
+                    ->label('Role')
             ])
             ->filters([
                 //
