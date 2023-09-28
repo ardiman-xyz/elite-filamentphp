@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "498af5fd6eb7c8f34513193f2ef3b9d1",
+    "content-hash": "f8bc23cf29f89db478d3546e0b5c9907",
     "packages": [
         {
             "name": "bezhansalleh/filament-shield",
