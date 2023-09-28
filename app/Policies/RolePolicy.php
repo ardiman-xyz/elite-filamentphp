@@ -18,7 +18,7 @@ class RolePolicy
      */
     public function viewAny(User $user): bool
     {
-        return true;
+        return $user->can('viewAny_role');
     }
 
     /**
@@ -30,7 +30,7 @@ class RolePolicy
      */
     public function view(User $user, Role $role): bool
     {
-        return true;
+        return $user->can('view_role');
     }
 
     /**
@@ -41,7 +41,7 @@ class RolePolicy
      */
     public function create(User $user): bool
     {
-        return true;
+        return $user->can('create_role');
     }
 
     /**
