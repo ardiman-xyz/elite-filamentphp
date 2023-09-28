@@ -29,7 +29,7 @@ class StudentResource extends Resource
                     ->description('Data ini akan menjadi data untuk login')
                     ->schema([
                         Forms\Components\Select::make('user_id')
-                            ->relationship('user', 'name')
+                            ->relationship('user', 'name', )
                             ->required()
                     ])->columns(2),
                 Forms\Components\Section::make('Biodata')
