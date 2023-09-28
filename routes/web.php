@@ -13,4 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', \App\Livewire\Home::class);
+Route::get('/', \App\Livewire\Home::class)->name('home');
+Route::get('/kelas', \App\Livewire\Classes\All::class)->name('classes.index');
+Route::get('/tim', \App\Livewire\Team\All::class)->name('team.index');
+Route::get('/kontak', \App\Livewire\Contact::class)->name('contact');

@@ -9,7 +9,7 @@
     <div class="container mx-auto">
         <div class="relative -mx-4 flex items-center justify-between">
             <div class="w-60 max-w-full px-4">
-                <a href="javascript:void(0)" class="block w-full py-5">
+                <a href="{{ route('home') }}" class="block w-full py-5">
                     <img
                         src="{{ asset('images/logo.svg') }}"
                         alt="logo"
@@ -43,7 +43,7 @@
                         <ul class="block lg:flex">
                             <li>
                                 <a
-                                    href="javascript:void(0)"
+                                    href="{{ route('home') }}"
                                     class="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex"
                                 >
                                     Beranda
@@ -51,7 +51,8 @@
                             </li>
                             <li>
                                 <a
-                                    href="javascript:void(0)"
+                                    wire:navigate
+                                    href="{{ route('classes.index') }}"
                                     class="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex"
                                 >
                                     Kelas
@@ -59,7 +60,8 @@
                             </li>
                             <li>
                                 <a
-                                    href="javascript:void(0)"
+                                    wire:navigate
+                                    href="{{ route('team.index') }}"
                                     class="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex"
                                 >
                                     Tim
@@ -75,7 +77,8 @@
                             </li>
                             <li>
                                 <a
-                                    href="javascript:void(0)"
+                                    wire:navigate
+                                    href="{{ route('contact') }}"
                                     class="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex"
                                 >
                                     Kontak
