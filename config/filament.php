@@ -10,7 +10,7 @@ return [
     | By uncommenting the Laravel Echo configuration, you may connect Filament
     | to any Pusher-compatible websockets server.
     |
-    | This will allow your users to receive real-time notifications.
+    | This will allow your teacher to receive real-time notifications.
     |
     */
 
