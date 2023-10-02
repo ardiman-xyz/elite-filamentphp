@@ -78,7 +78,7 @@
                             <li>
                                 <a
                                     wire:navigate
-                                    href="{{ route('contact') }}"
+                                    href="/contact"
                                     class="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex"
                                 >
                                     Kontak

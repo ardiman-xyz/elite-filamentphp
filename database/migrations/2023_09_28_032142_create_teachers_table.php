@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('teachers', function (Blueprint $table) {
             $table->uuid("id")->primary();
             $table->unsignedBigInteger('user_id');
-            $table->foreign("user_id")->references("id")->on("teacher")->onDelete('cascade');
+            $table->foreign("user_id")->references("id")->on("users")->onDelete('cascade');
             $table->string("name");
             $table->text("description");
             $table->string('photo')->nullable();
