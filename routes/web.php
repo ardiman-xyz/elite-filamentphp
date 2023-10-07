@@ -20,4 +20,5 @@ Route::get('/login', function () {
 Route::get('/', \App\Livewire\Home::class)->name('home');
 Route::get('/kelas', \App\Livewire\Classes\All::class)->name('classes.index');
 Route::get('/tim', \App\Livewire\Team\All::class)->name('team.index');
-//Route::get('/kontak', \App\Livewire\Contact::class)->name('contact');
+
+Route::get('kelas/{id}', \App\Livewire\Classes\Detail::class)->name('class.detail');

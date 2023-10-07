@@ -2,12 +2,16 @@
 
 namespace App\Livewire;
 
+use Illuminate\View\View;
 use Livewire\Component;
+use App\Models\Faq as FaqModel;
 
 class Faq extends Component
 {
-    public function render()
+    public function render(): View
     {
-        return view('livewire.faq');
+        $faqs = FaqModel::all();
+
+        return view('livewire.faq', compact('faqs'));
     }
 }

@@ -60,12 +60,6 @@
                             3 Months support
                         </p>
                     </div>
-                    <a
-                        href="javascript:void(0)"
-                        class="block w-full rounded-md border border-[#D4DEFF] bg-transparent p-4 text-center text-base font-semibold text-primary transition hover:border-primary hover:bg-primary hover:text-white"
-                    >
-                        Choose Personal
-                    </a>
 
                     <div>
                 <span class="absolute right-0 top-7 z-[-1]">
@@ -371,12 +365,6 @@
                             4 Months support
                         </p>
                     </div>
-                    <a
-                        href="javascript:void(0)"
-                        class="block w-full rounded-md border border-primary bg-primary p-4 text-center text-base font-semibold text-white transition hover:bg-opacity-90"
-                    >
-                        Choose Business
-                    </a>
 
                     <div>
                 <span class="absolute right-0 top-7 z-[-1]">
@@ -682,12 +670,6 @@
                             12 Months support
                         </p>
                     </div>
-                    <a
-                        href="javascript:void(0)"
-                        class="block w-full rounded-md border border-[#D4DEFF] bg-transparent p-4 text-center text-base font-semibold text-primary transition hover:border-primary hover:bg-primary hover:text-white"
-                    >
-                        Choose Professional
-                    </a>
 
                     <div>
                 <span class="absolute right-0 top-7 z-[-1]">
