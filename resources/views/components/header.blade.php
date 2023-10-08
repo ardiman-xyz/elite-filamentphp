@@ -1,3 +1,7 @@
+@php
+    $setting = \App\Models\WebSetting::latest()->first();
+@endphp
+
 <header
     x-data="
             {
@@ -11,7 +15,7 @@
             <div class="w-60 max-w-full px-4">
                 <a href="{{ route('home') }}" class="block w-full py-5">
                     <img
-                        src="{{ asset('images/logo.svg') }}"
+                        src="{{ asset('storage/'.$setting->logo) }}"
                         alt="logo"
                         class="w-full"
                     />
@@ -69,7 +73,8 @@
                             </li>
                             <li>
                                 <a
-                                    href="javascript:void(0)"
+                                    wire:navigate
+                                    href="{{ route("testimonies") }}"
                                     class="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex"
                                 >
                                     Testimoni
@@ -98,7 +103,7 @@
                         href="javascript:void(0)"
                         class="rounded-lg bg-primary py-3 px-7 text-base font-medium text-white hover:bg-opacity-90"
                     >
-                        Sign Up
+                        Register
                     </a>
                 </div>
             </div>

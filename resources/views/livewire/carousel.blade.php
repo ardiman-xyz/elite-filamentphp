@@ -2,10 +2,10 @@
     <div class="splide__track">
         <ul class="splide__list">
             <li class="splide__slide">
-                <img src="{{ asset('images/slider1.png') }}" alt="">
+                <img src="{{ asset('images/sliders/1.png') }}" alt="">
             </li>
             <li class="splide__slide">
-                <img src="{{ asset('images/slider2.png') }}" alt="">
+                <img src="{{ asset('images/sliders/2.png') }}" alt="">
             </li>
         </ul>
     </div>
